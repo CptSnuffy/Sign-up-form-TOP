@@ -1,4 +1,9 @@
+//Swapped to vanilla CSS for this project 
+
+
 $debugborder: red;
+$formfont: Arial, Helvetica, sans-serif;
+
 
 @font-face {
     font-family: NorseBold;
@@ -45,4 +50,6 @@ $debugborder: red;
     width: 66%;
     height: 100%;
     right: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
