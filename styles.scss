@@ -1,5 +1,48 @@
 $debugborder: red;
 
+@font-face {
+    font-family: NorseBold;
+    src: url('./source/Norse-Bold.otf')
+}
+
 * {
-    border: 2px solid $debugborder;
+    // border: 2px solid $debugborder;
+    margin: 0;
+    padding: 0;
+}
+
+
+.image-parent .form-parent {
+    position: relative;
+}
+
+.large-image {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    left: 0px;
+    background-repeat: no-repeat;
+}
+
+.image-text{
+    position: absolute;
+    background-color: black;
+    opacity: .75;
+    width: 33%;
+    height: 20%;
+    bottom: 50vh;
+
+    font-family: NorseBold, sans-serif;
+    text-align: center;
+    font-size: min(5vw, 5vh);
+    color: white;
+    line-height: 20vh;
+}
+
+
+.form{
+    position: absolute;
+    width: 66%;
+    height: 100%;
+    right: 0px;
 }
