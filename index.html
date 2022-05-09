@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Sign-up Form</title>
+
+    <title>Sign up</title>
 </head>
-
 <body>
-    <div class="image-parent">
-        <img class="large-image" src="./source/images/winterhold.jpg" alt="An image from Skyrim">
-        <div class="image-text">
-            Skyrim
-        </div>
-    </div>
+<div class="image-text-wrapper">
+    <p class="image-text">Skyrim
+</div>
 
-    <div class="form-parent">
 
-        <form class="form" action="">
+<div class="form-wrapper">
 
-            <div class="form-text">
-                <p>This is not a real service! You know you need something like Skyrim in your life. Sign up
-                    <em>now</em> to go buy Skyrim</p>
-                <p>Todd <em>knows</em> you want to.</p>
-            </div>
-            <div class="form-wrapper">
-                <div class="name-fields">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" name="first-name" id="first-name">
+    <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+        Sign up <em>now</em> to get started.
+    </p>
 
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" name="last-name" id="last-name">
-                </div>
+    <p>Todd <em>knows</em> you want to</p>
 
-                <div class="contact-info-fields">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email">
 
-                    <label for="phone-number">PHONE NUMBER</label>
-                    <input type="tel" name="phone-number" id="phone-number">
-                </div>
+    <form action="" class="form">
 
-                <div class="password-fields">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password">
+            <div class="name-fields">
+                <label for="first-name">
+                    FIRST NAME:
+                    <input type="text" name="first-name" id="first-name" >
+                </label>
 
-                    <label for="password-confirm">CONFIRM PASSWORD</label>
-                    <input type="password" name="password-confirm" id="password-confirm">
-                </div>
+
+                 <label for="last-name">
+                     LAST NAME:
+                     <input type="text" name="last-name" id="last-name">
+                    </label>
+
+
             </div>
 
+            <div class="contact-info-fields">
+                <label for="email">
+                    *EMAIL:
+                    <input type="email" name="email" id="email" required>
+                </label>
 
-        </form>
 
-        <!-- Make a create account button here :) -->
+                <label for="phone-number">
+                    *PHONE NUMBER:
+                    <input type="tel" name="phone-number" id="phone-number" required>
+                </label>
 
-        <p>Already have an account? <a href="">Log in</a></p>
+            </div>
 
-    </div>
+            <div class="password-fields">
+                <label for="password">
+                    *PASSWORD:
+                    <input type="password" name="password" id="password" title="*required" required>
+                </label>
+
+
+                <label for="password-confirm">
+                    *PASSWORD:
+                    <input type="password" name="password-confirm" id="password-confirm" title="*required" required>
+                </label>
+            
+            </div>
+
+    </form>
+
+    <button type="button" name="button">Create Account</button>
+
+    <p class="footer-text">Already have an account? <a href="https://elderscrolls.bethesda.net/en/skyrim10">Log in</a></p>
+
+</div>
 </body>
-
 </html>

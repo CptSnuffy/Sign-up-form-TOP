@@ -1,93 +1,149 @@
-
-:root
-{
-    --main-bg-color: rgb(148, 105, 71);
-}
-
 @font-face {
-    font-family: NorseBold;
-    src: url('./source/Norse-Bold.otf')
+  font-family: NorseBold;
+  src: url("./source/Norse-Bold.otf");
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-* {
-    border: 2px solid red;
-    margin: 0;
-    padding: 0;
-
+html {
+  background: url("./source/images/windhelm.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-body{
-    background-color: var(--main-bg-color, brown);
+.image-text-wrapper {
+  position: absolute;
+  width: 45%;
+  height: 15%;
+  top: 35vh;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.image-parent .form-parent {
-    position: relative;
-    
+.image-text {
+  position: absolute;
+  font-family: NorseBold;
+  src: url("./source/Norse-Bold.otf");
+  color: whitesmoke;
+  font-size: 6rem;
+  text-align: center;
+  top: -8vh;
+  left: 16.75vw;
 }
 
-.large-image {
-    position: absolute;
-    width: 45%;
-    height: 100%;
-    left: 0px;
-    background-repeat: no-repeat;
+.form-wrapper {
+  position: absolute;
+  background-color: rgba(245, 245, 245, 0.85);
+  right: 0vw;
+  width: 55%;
+  height: 100%;
+  border: 2px solid whitesmoke;
+  border-radius: 2px;
 }
 
-.image-text{
-    position: absolute;
-    background-color: black;
-    opacity: .75;
-    width: 45%;
-    height: 20%;
-    bottom: 50vh;
-    left: 0;
-
-    font-family: NorseBold, sans-serif;
-    text-align: center;
-    font-size: min(10vw, 10vh);
-    color: white;
-    line-height: 20vh;
+.form {
+  position: absolute;
+  background-color: rgba(245, 245, 245, 0.9);
+  width: 100%;
+  height: 33%;
+  top: 34.5vh;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0 2rem 5rem;
 }
 
-
-.form{
-    position: absolute;
-    width: 55%;
-    height: 100%;
-    right: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+.name-fields, .contact-info-fields, .password-fields {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.form-text
-{
-    position: absolute;
-    font-weight: 600;
-    color: rgb(27, 27, 27);
-    top: 10vh;
-
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 5vh;
-    letter-spacing: .01rem;
+input[type=text], input[type=email], input[type=tel], input[type=password], input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-right: 10rem;
+  width: 75%;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 1.1rem;
 }
 
-.name-fields
-{
-    position: absolute;
-    top: 35vh;
-    left: 10vh;
+input[type=email]:invalid, input[type=tel]:invalid, input[type=password]:invalid {
+  border-color: red;
 }
 
-.contact-info-fields
-{
-    position: absolute;
-    top: 45vh;
-    left: 10vh;
+input[type=text]:valid, input[type=email]:valid, input[type=tel]:valid, input[type=password]:valid {
+  border-color: gray;
 }
 
-.password-fields
-{
-    position: absolute;
-    top: 55vh;
-    left: 10vh;
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+  color: rgb(70, 70, 70);
 }
+
+.form-wrapper > p {
+  width: 65%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  padding-top: 4rem;
+}
+
+button {
+  position: absolute;
+  width: 20%;
+  height: 5%;
+  bottom: 18vh;
+  left: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, rgb(47, 45, 90) 0%, rgb(93, 158, 201) 0%, rgb(71, 95, 175) 100%);
+  border: 0px solid;
+  border-radius: 8px;
+  z-index: 999;
+  transition-property: scale;
+  transition-duration: 0.25s;
+  transition-delay: 0;
+}
+
+button:hover {
+  scale: 1.1;
+}
+
+button:active {
+  background: linear-gradient(90deg, rgb(47, 45, 90) 0%, rgb(71, 123, 158) 0%, rgb(55, 73, 134) 100%);
+  scale: 1;
+}
+
+p.footer-text {
+  position: absolute;
+  bottom: 12vh;
+  left: 0.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.footer-text > a, .footer-text > a:visited {
+  color: rgb(53, 143, 216);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-text > a:hover {
+  color: rgb(35, 92, 139);
+}
+
+/*# sourceMappingURL=styles.css.map */
